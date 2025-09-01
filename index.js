@@ -8,9 +8,10 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/assets/index.html');
     console.log("SiteLoaded");
 })
-app.get('/assets', (req, res) => {
-    res.sendFile(__dirname + '/public/idkk');
-    console.log(req);
+app.get('/assets/:param1', (req, res) => {
+    res.sendFile(__dirname + '/assets/' + req.params.param1);
+    
+    console.log(req.params.param1);
 })
 app.get('/favicon.ico', (req, res) => {
     console.log(__dirname);
