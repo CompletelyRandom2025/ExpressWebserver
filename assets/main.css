@@ -1,22 +1,21 @@
 body{
-    background-image: linear-gradient(#4c1571, #23002c);
     font-family: monospace;
     color:white;
-    animation-name: zoom;
-    animation-duration: 10s;
-    animation-iteration-count:255;
     height: 100%;
     margin:0px;
     padding:0px;
-    background-position: 100% 100%;
+    background-color: rgb(230, 230, 230);
 }
 
 .topbar{
     width:100%;
     height:10%;
     display:flex;
-    background-color:rgb(255, 255, 255, 0.1);
-    border-bottom-style: solid;
+    background-image: linear-gradient(90deg, #8320c4, #ee55d0);
+    animation-name: zoom;
+    animation-duration: 10s;
+    animation-iteration-count:infinite;
+    background-position: 100% 100%;
 }
 
 .center{
@@ -24,10 +23,13 @@ body{
     height:fit-content;
     margin-left:25%;
     margin-right:25%;
-    background-color:rgb(255, 255, 255, 0.1);
+    background-color:rgb(250, 250, 250);
+    color:black;
+    box-shadow: 7px 7px 3px darkgray;
     padding-left:3px;
     padding-right:3px;
     border-radius:3px;
+    height:fit-content;
 }
 
 .menu{
