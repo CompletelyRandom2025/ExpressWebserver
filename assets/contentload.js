@@ -1,14 +1,12 @@
 response2="temp";
 async function get(id, type)
 {
-	await fetch("https://uselessfacts.jsph.pl/api/v2/facts/random").then(async Response => response2=Response);
-    response2 = await response2.json();
-    console.log(response2.text);
+	response2 = await fetch("part1");
+    response2 = await response2.text();
+    console.log(response2);
     const paragraph = document.createElement(type);
-    paragraph.textContent = response2.text;
+    paragraph.textContent = response2;
     const content = document.getElementById(id);
     content.appendChild(paragraph);
 }
 get('jscontent', 'h3');
-get('jscontent2', 'h3');
-get('jscontent3', 'h3');
