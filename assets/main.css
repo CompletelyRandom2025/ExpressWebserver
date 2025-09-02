@@ -50,6 +50,14 @@ body{
     margin:auto;
 }
 
+a{
+    text-decoration:none;
+    text-decoration-line:none;
+    text-decoration-color: white;
+    text-decoration-thickness:inhert;
+    text-decoration-style: inherit;
+}
+
 button{
     width:80px;
     height:48px;
@@ -69,6 +77,12 @@ button:hover{
     transition:0.5s;
 }
 button:active{
+    background-color:transparent;
+    border-color:white;
+    color:white;
+    transition:1s;
+}
+.active{
     background-color:transparent;
     border-color:white;
     color:white;

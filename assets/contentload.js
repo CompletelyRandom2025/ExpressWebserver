@@ -9,4 +9,4 @@ async function get(id, type)
     const content = document.getElementById(id);
     content.appendChild(paragraph);
 }
-get('jscontent', 'h3');
+get('jscontent', 'h1');
