@@ -5,15 +5,15 @@ const port = 80;
 
 app.get('/', (req, res) => {
     res.status(301);
-    res.redirect('/assets/index.html');
+    res.redirect('/docs/index.html');
 });
 app.get('/assets/:param1', (req, res) => {
-    res.sendFile(__dirname + '/assets/' + req.params.param1);
+    res.sendFile(__dirname + '/docs/' + req.params.param1);
     console.log(req.params.param1);
     //console.log("SiteLoaded");
 });
 app.get('/favicon.ico', (req, res) => {
-    res.sendFile(__dirname + '/assets/NewBrowse.gif');
+    res.sendFile(__dirname + '/docs/NewBrowse.gif');
 });
 
 app.listen(port, () => {
