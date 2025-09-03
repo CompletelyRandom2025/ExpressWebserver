@@ -9,7 +9,7 @@ body{
 
 .topbar{
     width:100%;
-    height:10%;
+    height:72px;
     display:flex;
     background-image: linear-gradient(90deg, #8320c4, #ee55d0);
     animation-name: zoom;
@@ -21,7 +21,7 @@ body{
 }
 
 .center{
-    margin-top:13vh;
+    margin-top:84px;
     margin-bottom:5vh;
     width:50%;
     height:fit-content;
@@ -35,7 +35,7 @@ body{
     border-radius:3px;
 }
 .center2{
-    margin-top:13vh;
+    margin-top:74px;
     margin-bottom:5vh;
     width:256px;
     height:fit-content;

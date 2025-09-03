@@ -1,7 +1,10 @@
 response2="temp";
 async function get(id, type)
-{
-	response2 = await fetch("part1");
+{ 
+    location1 = await window.location.hash;
+    location1 = await location1.replace('#', '');
+    console.log('location: ' + location1)
+	response2 = await fetch(location1);
     response2 = await response2.text();
     console.log(response2);
     const paragraph = document.createElement(type);
@@ -10,5 +13,3 @@ async function get(id, type)
     content.appendChild(paragraph);
 }
 get('jscontent', 'p');
-get('jscontent2', 'p');
-get('jscontent3', 'p');
