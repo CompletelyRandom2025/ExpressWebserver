@@ -5,7 +5,7 @@ const port = 80;
 
 app.get('/', (req, res) => {
     res.status(301);
-    res.redirect('/docs/index.html');
+    res.redirect('/assets/index.html');
 });
 app.get('/assets/:param1', (req, res) => {
     res.sendFile(__dirname + '/docs/' + req.params.param1);
