@@ -35,10 +35,9 @@ body{
     border-radius:3px;
 }
 .center2{
-    margin-top:74px;
+    margin-top:84px;
     margin-bottom:5vh;
     width:256px;
-    height:fit-content;
     margin-left:5%;
     margin-right:5%;
     background-color:rgb(250, 250, 250);
@@ -102,7 +101,7 @@ button:active{
     100% {background-size: 100% 100%};
 }
 
-@media (max-width:35rem)
+@media (max-width:50rem)
 {
     div
     {
@@ -113,7 +112,7 @@ button:active{
         width:90%;
     }
 }
-@media(min-width:35rem)
+@media(min-width:50rem)
 {
     div
     {
