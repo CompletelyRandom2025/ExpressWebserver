@@ -11,7 +11,7 @@ body{
     width:100%;
     height:72px;
     display:flex;
-    background-image: linear-gradient(90deg, #8320c4, #ee55d0);
+    background-image: linear-gradient(90deg, #8320c4, #ffc156);
     animation-name: zoom;
     animation-duration: 10s;
     animation-iteration-count:infinite;
@@ -20,13 +20,23 @@ body{
     top:0;
 }
 
+.sidebar{
+    max-width:88px;
+    height:100vh;
+    margin-top:72px;
+    position:fixed;
+    display:list-item !important;
+    top:0;
+    background-color:rgb(65, 65, 65);
+}
+
 .center{
     margin-top:84px;
     margin-bottom:5vh;
     width:50%;
     height:fit-content;
     margin-left:25%;
-    margin-right:25%;
+    margin-right:25%+88px;
     background-color:rgb(250, 250, 250);
     color:black;
     box-shadow: 7px 7px 3px darkgray;
@@ -51,7 +61,7 @@ body{
 .menu{
     background-color:transparent;
     display:flex;
-    width:fit-content;
+    width:100%;
     margin:auto;
 }
 
@@ -73,9 +83,21 @@ button{
     color:white;
     background-color: rgb(255, 255, 255, 0.1);
     border-color:rgb(255, 255, 255, 0.2);
-    margin-left:5%;
-    margin-right:5%;
+    margin-left:8px;
+    margin-right:8px;
     transition:1s;
+}
+.menubutton{
+    border-style:solid;
+    border-collapse:collapse;
+    border-left:none;
+    border-right:none;
+    border-radius:0px;
+    border-color:transparent;
+    margin:0px;
+    width:88px;
+    height:48px;
+    background-color:transparent;
 }
 button:hover{
     background-color:rgb(255, 255, 255, 0.2);
@@ -93,6 +115,11 @@ button:active{
     border-color:white;
     color:white;
     transition:1s;
+}
+img
+{
+    margin-left:8px;
+    margin-right:8px;
 }
 
 @keyframes zoom {

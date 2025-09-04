@@ -18,9 +18,7 @@ app.get('/favicon.ico', (req, res) => {
     res.sendFile(__dirname + '/docs/NewBrowse.gif');
 });
 app.get('/lorem', async (req, res) => {
-    response3=await test();
-    res.send(response3);
-    console.log(response3);
+    res.send(await lorem.generateWords(300));
 });
 
 app.listen(port, () => {
@@ -29,7 +27,7 @@ app.listen(port, () => {
 
 async function test()
 {
-    response2 = await fetch(new URL('https://uselessfacts.jsph.pl/api/v2/facts/random'));
+    response2 = await fetch(new URL(''));
     response2 = await response2.text();
     response2 =  JSON.parse(response2).text;
     response2 =  response2.toUpperCase();
