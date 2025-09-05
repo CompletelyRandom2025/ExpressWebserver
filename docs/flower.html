@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
-    <body>
-        <svg height="720px" width="480px" id="svg1" xmlns="http://www.w3.org/2000/svg">
+    <body onmousemove="showCoords(event)">
+        <svg height="480px" width="1024px" id="svg1" xmlns="http://www.w3.org/2000/svg">
             
         </svg>
 
         <script>
+            var color = "hsl(0, 100%, 50%)";
             const svg = document.getElementById('svg1');
             console.log("running");
             const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
@@ -32,32 +33,39 @@
             circle4.setAttribute("cy", "25px");
             circle4.setAttribute("fill", "yellow");
             svg.appendChild(circle4);
-            const circle5 = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+            /*const circle5 = document.createElementNS("http://www.w3.org/2000/svg", "circle");
             circle5.setAttribute("r", "20px");
             circle5.setAttribute("cx", "25px");
             circle5.setAttribute("cy", "25px");
             circle5.setAttribute("fill", "white");
-            svg.appendChild(circle5);
-            let i = 0;
+            svg.appendChild(circle5);*/
+            function showCoords(event)
+            {
+            let loop = 0;
+
             const animate = function () {
-            circle.setAttribute("cx", Math.cos(i/16)*30+i);
+            var i = event.clientX;
+            circle.setAttribute("cx", Math.cos(i/32)*30+i);
             circle.setAttribute("cy", Math.sin(i/16)*30+100);
-            circle2.setAttribute("cx", Math.cos(i/16+67.5)*30+i);
+            circle.setAttribute("fill", "hsl(" + i%360 + ", 100%, 50%)")
+            circle2.setAttribute("cx", Math.cos(i/32+67.5)*30+i);
             circle2.setAttribute("cy", Math.sin(i/16+67.5)*30+100);
-            circle3.setAttribute("cx", Math.cos(i/16+135)*30+i);
+            circle2.setAttribute("fill", "hsl(" + (i+25)%360 + ", 100%, 50%)")
+            circle3.setAttribute("cx", Math.cos(i/32+135)*30+i);
             circle3.setAttribute("cy", Math.sin(i/16+135)*30+100);
-            circle4.setAttribute("cx", Math.cos(i/16+202.5)*30+i);
+            circle3.setAttribute("fill", "hsl(" + (i+50)%360 + ", 100%, 50%)")
+            circle4.setAttribute("cx", Math.cos(i/32+202.5)*30+i);
             circle4.setAttribute("cy", Math.sin(i/16+202.5)*30+100);
-            circle5.setAttribute("cx", i);
-            circle5.setAttribute("cy", 100);
-            i++;
-            if (i > 256) i = 0;
-            window.requestAnimationFrame(animate);
+            circle4.setAttribute("fill", "hsl(" + (i+75)%360 + ", 100%, 50%)")
+            //circle5.setAttribute("cx", i);
+            //circle5.setAttribute("cy", 100);
+            //if (loop > 1024) loop = 0;
+            //window.requestAnimationFrame(animate);
             };
 
-            window.requestAnimationFrame(animate);
-            
-            console.log("finished");
+                window.requestAnimationFrame(animate);
+                console.log("finished");
+            }
         </script>
     </body>
 </html>
