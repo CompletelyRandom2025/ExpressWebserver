@@ -108,7 +108,7 @@ button:active{
     background-color:transparent;
     border-color:white;
     color:white;
-    transition:1s;
+    transition:0.1s;
 }
 .active{
     background-color:transparent;
